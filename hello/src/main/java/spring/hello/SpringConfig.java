@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import spring.hello.repository.JdbcMemberRepository;
+import spring.hello.repository.JdbcTempleteMemberRespository;
 import spring.hello.repository.MemberRepository;
 import spring.hello.service.MemberService;
 
@@ -27,7 +28,8 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository(){
         // 다형성 활용
-        return new JdbcMemberRepository(dataSource);
+        //return new JdbcMemberRepository(dataSource);
         //return new MemoryMemberRepository();
+        return new JdbcTempleteMemberRespository(dataSource);
     }
 }
