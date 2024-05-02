@@ -1,5 +1,6 @@
 package spring.hello.service;
 
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import spring.hello.domain.Member;
 import spring.hello.repository.MemberRepository;
@@ -8,7 +9,7 @@ import spring.hello.repository.MemoryMemberRepository;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+@Transactional
 public class MemberService {
     private final MemberRepository memberRepository;
 

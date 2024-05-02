@@ -8,20 +8,18 @@ import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import spring.hello.domain.Member;
 
 import javax.sql.DataSource;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public class JdbcTempleteMemberRespository implements MemberRepository{
+public class JdbcTemplateMemberRespository implements MemberRepository{
 
     private final JdbcTemplate jdbcTemplate;
 
     // 참고로 생성자가 1개일 경우 Autowired 생략 가능.
     @Autowired
-    public JdbcTempleteMemberRespository(DataSource dataSource) {
+    public JdbcTemplateMemberRespository(DataSource dataSource) {
         jdbcTemplate = new JdbcTemplate(dataSource);
     }
 

@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 import spring.hello.domain.Member;
 import spring.hello.repository.MemberRepository;
@@ -24,7 +25,7 @@ class MemberServiceIntegrationTest {
     void join() {
         // given
         Member member = new Member();
-        member.setName("spring");
+        member.setName("spring11");
 
         // when
         Long saveId = memberService.join(member);
