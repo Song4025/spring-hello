@@ -4,7 +4,8 @@ import org.springframework.stereotype.Repository;
 import spring.hello.domain.Member;
 
 import java.util.*;
-@Repository
+// data-jpa사용을위해 주석으로 처리함
+// @Repository
 public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>();
