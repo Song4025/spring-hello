@@ -21,8 +21,9 @@ public class MemberService {
     회원 가입
     */
     public Long join(Member member){
-        validateDuplicateMember(member); // 중복 회원 검증. 이름이 같을 수 없음.
+        long start = System.currentTimeMillis();
 
+        validateDuplicateMember(member); // 중복 회원 검증. 이름이 같을 수 없음.
         memberRepository.save(member);
         return member.getId();
     }

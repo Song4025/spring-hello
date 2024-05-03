@@ -4,6 +4,7 @@ import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import spring.hello.aop.TimeTraceAop;
 import spring.hello.domain.Member;
 import spring.hello.repository.JpaMemberRepository;
 import spring.hello.repository.MemberRepository;
@@ -41,6 +42,7 @@ public class SpringConfig {
     public MemberService memberService(){
         return new MemberService(memberRepository);
     }
+
 /*
     @Bean
     public MemberRepository memberRepository(){
